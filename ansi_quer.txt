@@ -1,0 +1,1 @@
+ansible-playbook -i myhosts copy_file.yml -u c1475263 -U b2bt -K
