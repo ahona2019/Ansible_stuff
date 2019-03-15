@@ -1,0 +1,5 @@
+
+---
+
+  - name: creating a folder
+    file: path=/home/ubuntu/ahona state=directory

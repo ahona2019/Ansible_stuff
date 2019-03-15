@@ -1,0 +1,21 @@
+---
+
+  - name: checkinh contents of a dir
+    hosts: all
+    tasks:
+      - name: creating one new dir
+        command: mkdir  /home/ubuntu/amie
+
+      - name: the command ls
+        command:
+             ls /home/ubuntu
+        register: result
+
+      - name: printing error message
+        debug: msg="Directory has no  contents"
+        when: result.stdout == ""
+        debug: msg="Directory have contents"
+        when: result.stdout != ""
+        
+        
+# if else with the debug messages basd on register variable ( here result) output  using stdout     

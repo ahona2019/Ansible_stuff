@@ -1,0 +1,7 @@
+---
+
+  - name: installing apache
+    apt: name=apache2 state=installed update_cache=yes
+
+  - name: display message
+    debug: msg="Apache one done"

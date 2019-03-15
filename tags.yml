@@ -1,0 +1,28 @@
+---
+
+  - name: Special tags
+    hosts: all
+    sudo: yes
+
+    tasks:
+      - name: location1
+        debug: msg="Bangalore"
+        tags:
+          - tag1
+
+      - name: location2
+        debug: msg="kolkata"
+        tags:
+          - tag2
+
+      - name: location 3
+        debug: msg="Deli"
+        tags:
+          - tag3
+
+      - name: location 4
+        debug: msg="Punjab"
+        tags:
+          - tag4
+          - always
+          

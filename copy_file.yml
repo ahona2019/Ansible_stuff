@@ -1,0 +1,11 @@
+---
+
+  - name: Writing a playbok to copy file to remote host
+    hosts: all
+    tasks:
+      - name: check if file present in remote host
+        shell: ls
+        register: result
+
+      - name: debugging the result
+        debug: msg="{{result.stdout_lines}}"

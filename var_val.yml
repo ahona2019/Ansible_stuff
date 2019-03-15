@@ -1,0 +1,11 @@
+---
+
+ - name: checking the reg var
+   hosts: all
+   tasks:
+     - name: output of some command
+       command: mkdir foldie
+       register: result
+
+     - name: printinhh the result
+       debug: var=result
